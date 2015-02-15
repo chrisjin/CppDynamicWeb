@@ -1,0 +1,283 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+       <META   HTTP-EQUIV=”Pragma”   CONTENT=”no-cache”> 
+       <META   HTTP-EQUIV=”Cache-Control”   CONTENT=”no-cache”> 
+       <META   HTTP-EQUIV=”Expires”   CONTENT=”0”> 
+       <META http-equiv="content-type" content="text/html"; charset="GBK"> 
+       <style type="text/css">
+         .icon{position:relative;top:5px;height:50;width:50px;}
+         .forwardarrow{position:relative;top:5px;height:20px;width:20px;}
+         .backarrow{position:relative;top:5px;height:40px;width:40px;}
+         .textbox{height:20px;width:600px;font-size:%200}
+         .fontcarvegray{background-color: gray;border-style: inset;color:blue}
+       </style>
+       <script language="javascript">AC_FL_RunContent = 0;</script>
+       <script src="AC_RunActiveContent.js" language="javascript"></script>
+       <script type="text/javascript">
+          var send=0;
+          var rec=0;
+          var recxml=0;
+          var links="";
+          var currentdir="";
+          var flag=0;
+          function sendcontent(con)
+          {
+            send.open("POST","ddd",true);
+            send.onreadystatechange=processRequest;
+            send.setRequestHeader("Content-Type","text/xml;charset=UTF-8"); 
+            var buff=encodeURI(con);
+            currentdir=con;
+            
+            send.send(currentdir);
+          }
+          function getfile(con)
+          {
+            var buff=escape(con+"<");
+        
+            send.open("GET",buff,true);
+            send.onreadystatechange=processRequest;
+            send.setRequestHeader("Content-Type","text/xml;charset=UTF-8"); 
+            
+            currentdir=con;
+            send.send("");
+          }
+          function strcat(a,b)
+          {
+            a+=b;       
+          }
+          function viewfile(para)
+          {
+            a+=b;       
+          }
+          function writelinks(para)
+          {
+                 currentdir=para;
+                 var alinks=("<BIG class=\"fontcarvegray\">"+para.substring(para.lastIndexOf("/")+1,para.length)+"</BIG>"); 
+                     alinks+="<br>";
+                     alinks+="<br>";
+                     alinks+=("<a href="+'\"'+encodeURI(para.replace(/:/,"?"))+'\"'+"style=\"font-weight: 900\">");
+                     alinks+="<BIG class=\"fontcarvegray\">";
+                     alinks+="<fond color=\"#8C96B5\" bgcolor=\"white\">";
+                     alinks+= ("下载");
+                     alinks+="</fond>";
+                     alinks+="</BIG>";
+                     alinks+="</a>";
+                     
+                     alinks+=("<a href="+'\"'+encodeURI(para.replace(/:/,"<"))+'\"'+"style=\"font-weight: 900\" target=\"_blank\">"); 
+                     alinks+="<BIG class=\"fontcarvegray\">";
+                     alinks+="<fond color=\"#8C96B5\" bgcolor=\"white\">";
+                     alinks+= ("查看");
+                     alinks+="</fond>";
+                     alinks+="</BIG>";
+                     alinks+="</a>";
+                 //alert(alinks);
+                 document.getElementById("form2").innerHTML=alinks; 
+                 document.getElementById("textarea").value=currentdir; 
+          }
+          function processRequest()
+          {
+            
+            if(send.readyState==4)
+            {
+              
+              rec=send.responseText;
+               recxml=send.responseXML;
+                 
+               var files=recxml.getElementsByTagName("file");
+               var filename="";
+               var i=0;
+               var isfolder="";
+               var firstname=""+recxml.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+               links="";
+               links+="<br>";
+               var curbuff=currentdir;
+              
+               links+="<table >";
+               links+="<tr>";
+               for(i=0;i<files.length;i++)
+               {
+               
+               file=recxml.getElementsByTagName("name")[i].childNodes[0].nodeValue;
+               if(file=="."||file=="..")continue;
+               isfolder=recxml.getElementsByTagName("isfolder")[i].childNodes[0].nodeValue;
+               if(currentdir!="0")
+               curbuff=currentdir+"/"+file;
+               else
+               curbuff=file;
+               links+="<td>";
+                   if(isfolder==1)
+                   links+=('<a href=\"javascript:sendcontent(\''+curbuff+"\')\" style=\"font-weight: 900\">");
+                   else if(isfolder==0)
+                   links+=('<a href=\"javascript:writelinks(\''+curbuff+"\')\" style=\"font-weight: 900\">");   
+                       if(isfolder==1)
+                       links+="<img src=\"folder.png\"  class=\"icon\" border=\"0\" >";
+                       else if(isfolder==0)
+                       links+="<img src=\"file.png\" class=\"icon\" border=\"0\" >";
+                       
+                       links+="<BIG class=\"fontcarvegray\">";
+                       links+="<fond color=\"#8C96B5\" bgcolor=\"white\">";
+                       links+= (file);
+                       links+="</fond>";
+                       links+="</BIG>";
+                   links+="</a>";
+               links+="</td>";
+               if(firstname==".."||firstname==".")
+               flag=1;
+               else
+               flag=-1;
+               if(((i-flag)%4==0)&&(currentdir!="0")&&(i!=0)&&(i!=(files.length-1))) 
+               links+="</tr><tr>";
+                }  
+               links+="</tr>";
+              links+="</table>";
+              
+              
+              if(currentdir!="0")
+              document.getElementById("form2").innerHTML=links ; 
+              else
+              document.getElementById("drive").innerHTML=links ;    
+             document.getElementById("textarea").value=currentdir; 
+            }      
+          }
+          
+          function back()
+          {
+              currentdir=  currentdir.substring(0,currentdir.lastIndexOf("/")) ;
+              sendcontent(currentdir) ;
+                   
+          }
+          function forward()
+          {
+           var tt=document.getElementById("textarea").value+""; 
+            sendcontent(tt);
+            currentdir=tt;
+                   
+          }
+          function listchange()
+          {
+              var bod=document.getElementById("mbody");
+              var sel=document.getElementById("bkselect");
+               
+              switch(sel.value)  
+              {
+                  case "1":
+                       bod.background="verline.png"; 
+                       break;    
+                  case "2":
+                       bod.background="head.png"; 
+                       break; 
+                  case "3":
+                       bod.background="pumpkin.png"; 
+                       break; 
+                  case "4":
+                       bod.background="line.png"; 
+                       break; 
+                  case "5":
+                       bod.background="forest.png"; 
+                       break; 
+                  case "6":
+                       bod.background="leaves.png"; 
+                       break; 
+                  case "7":
+                       bod.background="wave.png"; 
+                       break; 
+                  case "8":
+                       bod.background="bk.jpg"; 
+                       break;
+                  case "9":
+                       bod.background="white.gif"; 
+                       break;                
+                                 
+              
+              }
+ 
+                   
+          }
+
+       </script>
+    </head>
+    <body id="mbody" background="verline.png"> 
+       <script language="javascript">
+
+            send= window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            var start=""+"0" ;
+            sendcontent(start) ;
+                
+       </script>
+              
+
+        <SELECT id="bkselect" onchange="javascript:listchange()">
+            <OPTION VALUE="1">竖线</option>
+            <OPTION VALUE="2">骷髅</option>
+            <OPTION VALUE="3">南瓜</option>
+            <OPTION VALUE="4">斜线</option>
+            <OPTION VALUE="5">藤</option>
+            <OPTION VALUE="6">叶子</option>
+            <OPTION VALUE="7">波纹</option>
+            <OPTION VALUE="8">橘红色</option>
+            <OPTION VALUE="9">白色</option>
+        </SELECT>
+        
+
+       
+       <center>     
+            <div name="form1" id="pagination" method="post">  
+            <q class="fontcarvegray">路径(用'/'例如c:/windows)</q>
+            <input type="text" id="textarea" class="textbox" row="1"/>
+            <a  
+            href=
+            'javascript:forward()' 
+            ><img src="rightarrow.png" border="0" class="forwardarrow"></a>
+            </div> 
+            <a href="javascript:back()"><img src="uparrow.png" border="0" class="backarrow"></a>
+            <p id="drive"></p> 
+            <p id="form2"></p>
+            <a href="javascript:back()"><img src="uparrow.png" border="0" class="backarrow"></a> 
+       </center>
+ <script language="javascript">
+       	if (AC_FL_RunContent == 0) {
+    		alert("This page requires AC_RunActiveContent.js.");
+    	} else {
+     	
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',
+			'width', '450',
+			'height', '580',
+			'src', 'MoviePlayerPro',
+			'quality', 'high',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'align', 'middle',
+			'play', 'true',
+			'loop', 'true',
+			'scale', 'showall',
+			'wmode', 'transparent',
+			'devicefont', 'false',
+			'id', 'MoviePlayerPro',
+			'bgcolor', '#000000',
+			'name', 'MoviePlayerPro',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'movie', 'MoviePlayerPro',
+			'salign', ''
+			); //end AC code
+	}
+</script>
+<noscript>
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="450" height="580" id="MoviePlayerPro" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="true" />
+	<param name="movie" value="MoviePlayerPro.swf" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="transparent" />
+    <param name="bgcolor" value="#000000" />	
+    <embed src="MoviePlayerPro.swf" quality="high" wmode="transparent" bgcolor="#000000" width="450" height="580" name="MoviePlayerPro" align="middle" allowScriptAccess="sameDomain" allowFullScreen="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+</noscript>
+       <DIV>
+<a href="http://www.baidu.com">Justice shall be done<a>
+</DIV>
+
+  
+    </body>
+</html>

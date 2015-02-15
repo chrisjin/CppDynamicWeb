@@ -1,0 +1,174 @@
+<html>
+    <head>
+       <META   HTTP-EQUIV=”Pragma”   CONTENT=”no-cache”> 
+       <META   HTTP-EQUIV=”Cache-Control”   CONTENT=”no-cache”> 
+       <META   HTTP-EQUIV=”Expires”   CONTENT=”0”> 
+       <META http-equiv="content-type" content="text/html"; charset="GBK"> 
+       <script type="text/javascript">
+          var send=0;
+          var rec=0;
+          var recxml=0;
+          var links="";
+          var currentdir="";
+          var flag=0;
+          function sendcontent(con)
+          {
+            send.open("POST","ddd",true);
+            send.onreadystatechange=processRequest;
+            send.setRequestHeader("Content-Type","text/xml;charset=UTF-8"); 
+            var buff=encodeURI(con);
+            currentdir=con;
+            
+            send.send(currentdir);
+          }
+          function getfile(con)
+          {
+            var buff=escape(con+"<");
+        
+            send.open("GET",buff,true);
+            send.onreadystatechange=processRequest;
+            send.setRequestHeader("Content-Type","text/xml;charset=UTF-8"); 
+            
+            currentdir=con;
+            send.send("");
+          }
+          function strcat(a,b)
+          {
+            a+=b;       
+          }
+          function viewfile(para)
+          {
+            a+=b;       
+          }
+          function writelinks(para)
+          {
+                 currentdir=para;
+                 var alinks=("<BIG style=\"background-color: gray;border-style: inset ;\">"+para.substring(para.lastIndexOf("/")+1,para.length)+"</BIG>"); 
+                     alinks+="<br>";
+                     alinks+="<br>";
+                     alinks+=("<a href="+'\"'+encodeURI(para.replace(/:/,"?"))+'\"'+"style=\"font-weight: 900\">");
+                     alinks+="<BIG style=\"background-color: gray;border-style: inset ;\">";
+                     alinks+="<fond color=\"#8C96B5\" bgcolor=\"white\">";
+                     alinks+= ("下载");
+                     alinks+="</fond>";
+                     alinks+="</BIG>";
+                     alinks+="</a>";
+                     
+                     alinks+=("<a href="+'\"'+encodeURI(para.replace(/:/,"<"))+'\"'+"style=\"font-weight: 900\" target=\"_blank\">"); 
+                     alinks+="<BIG style=\"background-color: gray;border-style: inset ;\">";
+                     alinks+="<fond color=\"#8C96B5\" bgcolor=\"white\">";
+                     alinks+= ("查看");
+                     alinks+="</fond>";
+                     alinks+="</BIG>";
+                     alinks+="</a>";
+                 //alert(alinks);
+                 document.getElementById("form2").innerHTML=alinks; 
+                 document.getElementById("textarea").innerHTML=currentdir; 
+          }
+          function processRequest()
+          {
+            
+            if(send.readyState==4)
+            {
+              
+              rec=send.responseText;
+               recxml=send.responseXML;
+                 
+               var files=recxml.getElementsByTagName("file");
+               var filename="";
+               var i=0;
+               var isfolder="";
+               var firstname=""+recxml.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+               links="";
+               links+="<br>";
+               var curbuff=currentdir;
+              
+               links+="<table >";
+               links+="<tr>";
+               for(i=0;i<files.length;i++)
+               {
+               
+               file=recxml.getElementsByTagName("name")[i].childNodes[0].nodeValue;
+               if(file=="."||file=="..")continue;
+               isfolder=recxml.getElementsByTagName("isfolder")[i].childNodes[0].nodeValue;
+               if(currentdir!="0")
+               curbuff=currentdir+"/"+file;
+               else
+               curbuff=file;
+               links+="<td>";
+                   if(isfolder==1)
+                   links+=('<a href=\"javascript:sendcontent(\''+curbuff+"\')\" style=\"font-weight: 900\">");
+                   else if(isfolder==0)
+                   links+=('<a href=\"javascript:writelinks(\''+curbuff+"\')\" style=\"font-weight: 900\">");   
+                       if(isfolder==1)
+                       links+="<img src=\"folder.png\" border=\"0\" style=\"position:relative;top:5px;height:50px;width:50px;\">";
+                       else if(isfolder==0)
+                       links+="<img src=\"file.png\" border=\"0\" style=\"position:relative;top:5px;height:50px;width:50px;\">";
+                       
+                       links+="<BIG style=\"background-color: gray;border-style: inset ;\">";
+                       links+="<fond color=\"#8C96B5\" bgcolor=\"white\">";
+                       links+= (file);
+                       links+="</fond>";
+                       links+="</BIG>";
+                   links+="</a>";
+               links+="</td>";
+               if(firstname==".."||firstname==".")
+               flag=1;
+               else
+               flag=-1;
+               if(((i-flag)%4==0)&&(currentdir!="0")&&(i!=0)&&(i!=(files.length-1))) 
+               links+="</tr><tr>";
+                }  
+               links+="</tr>";
+              links+="</table>";
+              
+              
+              if(currentdir!="0")
+              document.getElementById("form2").innerHTML=links ; 
+              else
+              document.getElementById("drive").innerHTML=links ;    
+             document.getElementById("textarea").innerHTML=currentdir; 
+            }      
+          }
+          
+          function back()
+          {
+              currentdir=  currentdir.substring(0,currentdir.lastIndexOf("/")) ;
+              sendcontent(currentdir) ;
+                   
+          }
+          function forward()
+          {
+           var tt=document.getElementById("textarea").value+""; 
+            sendcontent(tt);
+            currentdir=tt;
+                   
+          }
+
+       </script>
+    </head>
+    <body background="bk.jpg"> 
+       <script type="text/javascript">
+            send= window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            var start=""+"0" ;
+            sendcontent(start) ;
+       </script>
+       <center>     
+            <form name="form1" id="pagination" method="post">  
+            <q style="background-color: gray;border-style: inset;color:blue">路径(用'/'例如c:/windows)</q>
+            <TEXTAREA id="textarea" style="height:20px;width:200px;">c:</TEXTAREA> 
+            <a  
+            href=
+            'javascript:forward()' 
+            ><img src="rightarrow.png" border="0" style="position:relative;top:5px;height:20px;width:20px;"></a>
+            </form> 
+            <a href="javascript:back()"><img src="uparrow.png" border="0" style="position:relative;top:5px;height:40px;width:40px;"></a>
+            <p id="drive"></p> 
+            <p id="form2"></p>
+            <a href="javascript:back()"><img src="uparrow.png" border="0" style="position:relative;top:5px;height:40px;width:40px;"></a> 
+       </center>
+
+       
+       <a href="ss">bbb</a>
+    </body>
+</html>

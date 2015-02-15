@@ -1,0 +1,60 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <script type="text/javascript" src="js/base64.js"></script>
+      <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+     
+      <script type="text/javascript">
+         function mygetFlv() 
+         {
+         var uri =$('#videoPageURI').val();
+
+          $('#resultbox').show();
+          $("#result").html("");
+	      $.getScript("http://www.flvxz.com/getFlv.php?url="+encodeBase64(uri.replace('http://','http:##').replace('https://','https:##')),changeonclick);
+         }
+         function changeonclick()
+         {
+             for(var i=0;i<$("a").length;i++)
+             {
+              var tmp="a:eq("+i.toString()+")";
+              $(tmp).attr("href","javascript:change()");
+             }
+         }
+         function change()
+         {
+          var flashstr="<embed src=\"JcClassicPlayerC.swf\" flashvars="
+                      +"\"source_file="
+                      +$("a:eq(1)").attr("href").toString()+"\""
+                      +"showMovieInfo=1 "
+                      +"pluginspage=\"http://www.macromedia.com/go/getflashplayer\" "
+                      +"type=\"application/x-shockwave-flash\" "
+                      +"wmode=\"transparent\" "
+                      +"allowFullScreen=\"true\" "
+                      +"quality=\"high\" "
+                      +"width=\"335\" height=\"252\"></embed>";
+          $("#showuri").html(flashstr);        
+         }
+       </script>
+    </head>
+    <body>
+
+  		<input type="button" id="fetchButton" class="submit" value="Input the URL of the video page" onclick="mygetFlv();" />
+		<input type="text" name="url" id="videoPageURI" maxlength="500" size="40" class="url" value="" />
+        <div class="box" id="resultbox">
+            <div class="lin">
+            </div>
+        	<div id="result">
+        	</div>
+        </div>
+        <a href="aaaa" >ssss</a>
+        <a href="aaaa" >cccccccc</a>
+
+        <div id="showuri">
+        </div>
+        <script type="text/javascript">  
+             $("a").click(function(){change();});
+ 
+        </script>
+    </body>
+</html>

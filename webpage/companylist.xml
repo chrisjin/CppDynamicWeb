@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Workbook>
+ <Worksheet>
+  <Table>
+   <Row>
+    <Data>Symbol</Data>
+    <Data>Name</Data>
+    <Data>LastSale</Data>
+    <Data>Sector</Data>
+    <Data>Industry</Data>
+    <Data>HomePage</Data>
+    <Data>Logo</Data>
+   </Row>
+   <Row>
+    <Symbol>MSFT</Symbol>
+    <Name>Microsoft</Name>
+    <LastSale>47.65</LastSale>
+    <Sector>Technology</Sector>
+    <Industry>Computer Software: Prepackaged Software</Industry>
+    <HomePage>http://www.microsoft.com/</HomePage>
+    <Logo>http://cs-server.usc.edu:45678/hw/hw4/logomicrosoft.png</Logo>
+   </Row>
+   <Row>
+    <Symbol>MMM</Symbol>
+    <Name>3M Company</Name>
+    <LastSale>166.87</LastSale>
+    <Sector>Health Care</Sector>
+    <Industry>Medical/Dental Instruments</Industry>
+    <HomePage>http://www.3m.com/</HomePage>
+    <Logo>http://cs-server.usc.edu:45678/hw/hw4/logo3m.jpg</Logo>
+   </Row>
+   <Row>
+    <Symbol>WBAI</Symbol>
+    <Name>500.com Limited</Name>
+    <LastSale>19.51</LastSale>
+    <Sector>Consumer Services</Sector>
+    <Industry>Services-Misc. Amusement &amp; Recreation</Industry>
+    <HomePage>http://www.500.com/</HomePage>
+    <Logo>http://cs-server.usc.edu:45678/hw/hw4/logo500com.jpg</Logo>
+   </Row>
+   <Row>
+    <Symbol>AHC</Symbol>
+    <Name>A.H. Belo Corporation</Name>
+    <LastSale>13.12</LastSale>
+    <Sector>Consumer Services</Sector>
+    <Industry>Newspapers/Magazines</Industry>
+    <HomePage>http://www.ahbelo.com/</HomePage>
+    <Logo>http://cs-server.usc.edu:45678/hw/hw4/logoahbelo.jpg</Logo>
+   </Row>
+   <Row>
+    <Symbol>AAC</Symbol>
+    <Name>AAC Holdings, Inc.</Name>
+    <LastSale>29.50</LastSale>
+    <Sector>Health Care</Sector>
+    <Industry>Medical Specialities</Industry>
+    <HomePage>http://americanaddictioncenters.org/</HomePage>
+    <Logo>http://cs-server.usc.edu:45678/hw/hw4/logoaacholdings.jpg</Logo>
+   </Row>
+   <Row>
+    <Symbol>AIR</Symbol>
+    <Name>AAR Corp.</Name>
+    <LastSale>28.30</LastSale>
+    <Sector>Capital Goods</Sector>
+    <Industry>Aerospace</Industry>
+    <HomePage>http://www.aarcorp.com/</HomePage>
+    <Logo>http://cs-server.usc.edu:45678/hw/hw4/logoaar.png</Logo>
+   </Row>
+   <Row>
+    <Symbol>INTC</Symbol>
+    <Name>Intel Corp</Name>
+    <LastSale>37.35</LastSale>
+    <Sector>Technology</Sector>
+    <Industry>Computer Industry</Industry>
+    <HomePage>http://www.intel.com/</HomePage>
+    <Logo>http://cs-server.usc.edu:45678/hw/hw4/logointel.png</Logo>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

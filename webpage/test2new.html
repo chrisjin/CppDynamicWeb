@@ -1,0 +1,109 @@
+<html>
+<head>
+<script>
+var xmlDoc;
+function ViewXML(xml_url){
+
+    function loadXML(xml_url) 
+    {
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.open("GET",xml_url,false);
+        
+        xmlhttp.send();
+        
+        xmlDoc=xmlhttp.responseXML;
+        alert(xmlhttp.responseText);
+        return xmlDoc;
+    }
+    if(xml_url==""){
+        
+        alert("No XML file.");
+        
+    }
+    else{
+
+         xmlDoc = loadXML(xml_url);
+
+         if(xmlDoc==null){
+            alert("XML file is not existed.");
+        }
+        else if(xmlDoc.getElementsByTagName("parsererror").length>0){
+            alert("Error in XML File.");
+            
+        }
+        else if(xmlDoc.getElementsByTagName("Row").length==0){
+            alert("There is no real data in XML file");
+        }
+        else{
+        var rows=xmlDoc.getElementsByTagName("Row");//get all rows
+        var rows_length=rows[0].childNodes.length;
+        //the number of child nodes of a row.
+        rowsNodelist=rows[1].childNodes;
+        for(i=0;i<rows_length;i++)
+        {
+            rows_table_tag=rowsNodeList.item(i).nodeName;
+            
+                if( rows_table_tag=="Symbol"){output=output+"<tr><td><center><b>Symbol<b></center></td>";alert("qxp");}
+                if( rows_table_tag=="Name"){output=output+"<td><center><b>Name</b></center></td>";}
+                if( rows_table_tag=="LastSale"){output=output+"<td><center><b>LastSale</b></center></td>";}
+                if( rows_table_tag=="Sector"){output=output+"<td><center><b>Sector</b></center></td>";}
+                if( rows_table_tag=="Industry"){output=output+"<td><center><b>Industry</b></center></td>";}
+                if( rows_table_tag=="HomePage"){output=output+"<td><center><b>HomePage</b></center></td>";}
+                if( rows_table_tag=="Logo"){output=output+"<td><center><b>Logo</b></center></td></tr>";}
+        }
+        
+        for(k=1;k<rows.length;k++)// the number of rows in the xml
+        {
+            rowsNodeListnew=rows[k].childNodes;
+            for(i=0;i<rows_length;i++)
+            {
+                rows_table_tag=rowsNodeListnew.item(i).nodeName;
+                if( rows_table_tag=="Symbol"){output=output+"<tr><td>"+rowsNodeListnew.item(i).firstChild.nodeValue+"</td>";}
+                if( rows_table_tag=="Name"){output=output+"<td>"+rowsNodeListnew.item(i).firstChild.nodeValue+"</td>";}
+                if( rows_table_tag=="LastSale"){output=output+"<td>"+rowsNodeListnew.item(i).firstChild.nodeValue+"</td>";}
+                if( rows_table_tag=="Sector"){output=output+"<td>"+rowsNodeListnew.item(i).firstChild.nodeValue+"</td>";}
+                if( rows_table_tag=="Industry"){output=output+"<td>"+rowsNodeListnew.item(i).firstChild.nodeValue+"</td>";}
+                if( rows_table_tag=="HomePage"){output=output+"<td><a href='"+rowsNodeListnew.item(i).firstChild.nodeValue+"'>Link to List</td>";}
+                if( rows_table_tag=="Logo"){output=output+"<td colspan=3><img src='http://cs-server.usc.edu:45678/hw/hw4/"+rowsNodeListnew.item(i).firstChild.nodeValue+"'></img></td></tr>";}
+            }
+        }
+            output=output+"</table></bo"+"dy><NOSCRIPT></html>";
+            hWin = window.open("", "hw4", "height=1000,width=800,scrollbars=yes");
+            hWin.document.write(output);
+            hWin.document.close();
+
+
+        }
+    }
+}
+</script>
+<style>
+    a:link{
+        text-decoration: none;
+        color: white;
+    }</style>
+</head>
+<BODY>
+<center>
+<h3>My CS571 Homework</h3>
+<p><bold>Enter URL for Company List XML File</bold></p>
+<form>
+    <input id="xml_url" type="text" size="40" maxlenght="10"></input><br>
+<button onclick="ViewXML(document.getElementById('xml_url').value)">Submit Query</button>
+
+</form>
+</center>
+<NOSCRIPT>
+<div style="display: block; font-family: Verdana, Geneva, Arial; font-size: 10px">
+
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	5211对战平台用户中心_平台账号创建
+</title><link href="createuser.aspx_files/boydcss.css" rel="stylesheet" type="text/css">
+        <script src="createuser.aspx_files/JScript.js" type="text/javascript" language="javascript"></script>
+        <script src="createuser.aspx_files/Message.js" language="javascript" type="text/javascript"></script>
+          <script src="createuser.aspx_files/JScriptImage.js" type="text/javascript"></script>
+<script src="createuser.aspx_files/jquery-1.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+    <form name="form1" method="post" action="createuser.aspx" id="form1">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxMDc1NTYxOTcPZBYCAgMPZBYEZg9kFgICAQ8PFgIeBFRleHQFIiDmiJHnmoTpgJrooYzor4HvvJo2MzE0MDE4MEBwcC5jb21kZAICDw8WAh4HVmlzaWJsZWdkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQURaW1nQnV0dG9uUmVnaXN0ZXJkjlCeH0HUoz0ZqYp/AZkFmCToyQ==" type="hidden">
+</div>
+
+<div>
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgKv/vCADgLI7umUAQK1qbSRCwKk94CJCwKuqciQCQK7wcXcAY6t0vO2qUu/NfPYFCcjQL9+0h+z" type="hidden">
+</div>
+    <script language="javascript" type="text/javascript">
+
+        function ajax(type, str) {
+            return $.ajax({
+                url: "../UserCheck.aspx?type=" + type + "&user=" + escape(str),
+                async: false
+            }).responseText;
+        }
+        function is_substring(text) {
+            text = text.substring(0, 1);
+            if (text != '0') return true;
+            return false;
+        }
+        function chkname(user) {
+            var user = user.value;
+            if (is_substring(ajax(1, user)))
+            { sAlert('<img src=\"../images/cw.gif\">很遗憾，您填的平台账号已被注册！'); }
+
+        }
+
+        function CheckPage() {
+            return true;
+        }
+
+    </script>
+    <div class="alcont">
+    	
+  <link href="createuser.aspx_files/boydcss.css" rel="stylesheet" type="text/css">
+  	<div class="topcont">
+        		<div class="logo">
+            	<div class="logocont"><a href="http://register.5211game.com/Account/MyAccount.aspx"><img src="createuser.aspx_files/logo_cont.jpg" height="85" width="274"></a></div>
+            	<div id="logo" class="logo_title1"></div>
+            </div>
+            <div class="topright">
+            	<div class="topright_btna">
+                	<div class="topright_btn11">
+                	  <table border="0" cellpadding="0" cellspacing="0" width="221">
+                	    <tbody><tr>
+                	      <td>     <a href="http://www.5211game.com/" target="_blank"><img src="createuser.aspx_files/btn_backhome.jpg" height="22" width="110"></a></td>
+                	      <td>          <div onmouseout="document.getElementById('head_panl').style.display='none'" onmousemove="document.getElementById('head_panl').style.display='block'"><img src="createuser.aspx_files/btn_xiala.jpg"></div>
+              	        
+                            <div id="head_panl" onmouseout="document.getElementById('head_panl').style.display='none'" onmousemove="document.getElementById('head_panl').style.display='block'" style="display:none ;">
+                                <div class="xiala">
+                                    <div class="xialacont">
+                                        <ul>
+                                            <li class="colordi">
+                                                <div class="xialeft">
+                                                    <img src="createuser.aspx_files/xiala_icon1.jpg" height="16" width="15"></div>
+                                                <div class="xiaright">
+                                                    <a href="http://www.5211game.com/News.aspx" target="_blank">新 闻</a></div>
+                                            </li>
+                                            <li>
+                                                <div class="xialeft">
+                                                    <img src="createuser.aspx_files/xiala_icon2.jpg" height="16" width="16"></div>
+                                                <div class="xiaright">
+                                                    <a href="http://www.5211game.com/down.aspx" target="_blank">下 载</a></div>
+                                            </li>
+                                            <li class="colordi">
+                                                <div class="xialeft">
+                                                    <img src="createuser.aspx_files/xiala_icon3.jpg" height="16" width="16"></div>
+                                                <div class="xiaright">
+                                                     <a href="http://www.5211game.com/Hope.aspx?i=1" target="_blank">录 像</a></div>
+                                            </li>
+                                            <li>
+                                                <div class="xialeft">
+                                                    <img src="createuser.aspx_files/xiala_icon4.jpg" height="16" width="16"></div>
+                                                <div class="xiaright">
+                                                     <a href="http://www.5211game.com/Hope.aspx?i=2" target="_blank">视 频</a></div>
+                                            </li>
+                                            <li class="colordi">
+                                                <div class="xialeft">
+                                                    <img src="createuser.aspx_files/xiala_icon5.jpg" height="16" width="16"></div>
+                                                <div class="xiaright">
+                                                     <a href="http://www.5211game.com/Hope.aspx?i=3" target="_blank">排 行</a></div>
+                                            </li>
+                                            <li>
+                                                <div class="xialeft">
+                                                    <img src="createuser.aspx_files/xiala_icon6.jpg" height="16" width="16"></div>
+                                                <div class="xiaright">
+                                                     <a href="http://www.5211game.com/Hope.aspx?i=4" target="_blank">战 绩</a></div>
+                                            </li>
+                                            <li>
+                                                <div class="xialeft">
+                                                 </div>
+                                                <div class="xiaright">
+                                                     <a href="http://www.5211game.com/Hope.aspx?i=5" target="_blank">帮 助</a></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                             
+                                </div>
+                            </div></td>
+              	      </tr>
+              	    </tbody></table>
+                	</div>
+                    <div class="info_zhuangtai">
+                      <table border="0" cellpadding="0" cellspacing="0" width="98%">
+                        <tbody><tr>
+                          <td align="right"><span id="header_LabMy"> 我的通行证：63140180@pp.com</span></td>
+                          <td align="center"><a href="http://register.5211game.com/logout.aspx?returnURL=a_login.aspx"><img src="createuser.aspx_files/btn_tuichu.jpg" id="header_imageLogout" height="30" width="63"></a></td>
+                        </tr>
+                      </tbody></table>
+                    </div>
+              <div class="topright_btn4">
+                    	<ul>
+                        	<li><a href="http://register.5211game.com/account/myaccount.aspx"><img id="tagimage1" src="createuser.aspx_files/txz_d11.jpg" height="43" width="125"></a></li>
+                            <li><a href="http://register.5211game.com/MyManage/AccountManage.aspx"><img id="tagimage2" src="createuser.aspx_files/txz_d22.jpg" height="43" width="133"></a></li>
+                            <li><a href="javascript:void(0);" onclick="alert('敬请期待');"><img src="createuser.aspx_files/txz_d3.jpg" height="43" width="105"></a></li>
+                        </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+        	<div class="maincont">
+            	<div class="tongxingzheng">
+                	<div class="tongxingzheng_left">
+                	
+                	  
+<link href="createuser.aspx_files/boydcss.css" rel="stylesheet" type="text/css">
+<table style="margin-top: 20px;" align="center" border="0" cellpadding="3" cellspacing="3" width="200">
+    <tbody><tr>
+        <td class="font-blue1" height="25" align="left">
+            <strong class="font-blue2">平台帐号&nbsp;<img src="createuser.aspx_files/user.gif"></strong>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <img src="createuser.aspx_files/tongxingzheng_line.jpg" height="1" width="190">
+        </td>
+    </tr>
+     <tr>
+        <td class="font-blue2" align="center">
+            <div id="divside6" class="info_btn1">
+                <a href="http://register.5211game.com/account/createuser.aspx">帐号创建</a></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="font-blue2" align="center">
+            <div id="divside1" class="info_btn2">
+                <a href="http://register.5211game.com/account/userinfo.aspx">帐号管理</a></div>
+        </td>
+    </tr>
+</tbody></table>
+<table style="margin-top: 20px;" align="center" border="0" cellpadding="3" cellspacing="3" width="200">
+    <tbody><tr>
+        <td class="font-blue2" align="left">
+            <strong class="font-blue2">通 行 证&nbsp;<img src="createuser.aspx_files/account.gif"></strong>
+        </td>
+    </tr>
+    <tr>
+        <td class="font-blue2" align="center"><img src="createuser.aspx_files/tongxingzheng_line.jpg" height="1" width="190"></td>
+    </tr>
+    <tr>
+        <td class="font-blue2" align="center">
+            <div id="divside2" class="info_btn2">
+                <a href="http://register.5211game.com/account/editpwdaccount.aspx">密码修改</a></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="font-blue2" align="center">
+            <div id="divside3" class="info_btn2">
+               <a href="http://register.5211game.com/forget.aspx">密码找回</a></div>
+        </td>
+    </tr>
+  <tr>
+        <td class="font-blue2" align="center">
+            <div id="divside4" class="info_btn2">
+                <a href="http://register.5211game.com/Account/EditAnswer.aspx">密码保护问题设置</a></div>
+        </td>
+    </tr>
+      <tr>
+        <td class="font-blue2" align="center">
+            <div id="divside5" class="info_btn2">
+                <a href="http://register.5211game.com/Account/UpdateAnswer.aspx">密码保护问题修改</a></div>
+        </td>
+    </tr>
+ 
+    
+    
+</tbody></table>
+
+                	  <br>
+                    </div>
+                  <div class="tongxingzheng_right">
+                  	<div class="info_conttitle">账号创建</div>
+                 <div id="panelCreate">
+	   <div class="info_contarea">
+                    
+                      <table style="font-size: 14px;" align="center" border="0" cellpadding="3" cellspacing="2" width="450">
+                        <tbody><tr>
+                          <td class="font-blue1" align="right" width="61">平台账号：</td>
+                          <td width="363"> <input name="txtAccountName" value="Grrrr..." maxlength="10" id="txtAccountName" class="txt2_bg" onblur="chkname(this);over_txt(this,1);" onfocus="on_txt(this,1);" type="text"></td>
+                        </tr>
+                         <tr>
+                          <td class="font-blue1" align="right" width="61"></td>
+                          <td width="363">平台账号注册支持中文字符,2-5个中文</td>
+                        </tr>
+                        <tr>
+                          <td class="font-blue1" align="right">账号密码：</td>
+                          <td> <input name="txtPassword" maxlength="15" id="txtPassword" class="txt2_bg" onblur="over_txt(this,1);" onfocus="on_txt(this,1);" type="password"></td>
+                        </tr>
+                         <tr>
+                          <td class="font-blue1" align="right">确认密码：</td>
+                          <td>  <input name="txtPasswordSec" maxlength="15" id="txtPasswordSec" class="txt2_bg" onblur="over_txt(this,1);" onfocus="on_txt(this,1);" type="password"></td>
+                        </tr>
+                        <tr>
+                	      <td class="font-blue1" align="right">验证码：</td>
+                	      <td>
+                	      <input name="txtValidateCode" value="908703" maxlength="6" id="txtValidateCode" class="txt6_bg" onblur="over_txt(this,0);" onfocus="on_txt(this,0);" type="text">&nbsp;<img id="ValidateCodeImg" onclick="GetRandImgFile();" src="createuser.aspx_files/ValidateCode.gif" height="19" width="73"><a href="javascript:(void);" onclick="GetRandImgFile();">看不清？换一张试试</a></td>
+               	        </tr>
+                   
+                        <tr>
+                          <td colspan="2" class="font-blue1" height="60" align="center">
+                          <input name="imgButtonRegister" id="imgButtonRegister" src="createuser.aspx_files/btn_queding.jpg" onclick="javascript:return CheckPage();" style="height: 30px; width: 68px; border-width: 0px;" type="image"></td>
+                        </tr>
+                      </tbody></table>
+                    </div>
+                    
+                     <div style="margin-top:80px" class="mimaxiugai_tishi "><strong>小提示：</strong><br>
+                    请您慎重建立平台账号，目前1个通行证最多能创建3个平台账号，建立后将不能改名。</div>
+                    
+                    <script language="javascript" type="text/javascript" src="createuser.aspx_files/PVCount.xml"></script>
+                    
+</div>
+                    
+                
+                    
+                    
+                     
+                   
+                  </div>
+       	      </div>
+        	</div>
+        </div>
+    </div>     
+<link href="createuser.aspx_files/boydcss.css" rel="stylesheet" type="text/css">
+<style>
+.font_12pxBlueMidHard {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #40c2b3;
+	text-align: center;
+}
+</style>
+<br>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
+    <tbody><tr>
+        <td height="50" align="center" valign="middle">
+            <a href="http://pv.5211game.com/pvcount.aspx?id=14">关于平台 |</a><a href="http://pv.5211game.com/pvcount.aspx?id=15">
+                商务合作 |</a><a href="http://pv.5211game.com/pvcount.aspx?id=16"> 招聘信息 |</a><a href="http://pv.5211game.com/pvcount.aspx?id=17">
+                    客服中心 |</a><a href="http://pv.5211game.com/pvcount.aspx?id=18"> 家长监护 |</a><a href="http://pv.5211game.com/pvcount.aspx?id=19">
+                        虚拟货币服务说明 |</a><a href="http://pv.5211game.com/pvcount.aspx?id=20"> 使用协议 |</a><a href="http://pv.5211game.com/pvcount.aspx?id=21"> 服务条款</a><br>
+           Copyright © 2011 11对战平台.All rights reserved. 上海奕奕数字技术有限公司 沪ICP备11002703号-1　沪网文[2011]0202-021
+        </td>
+    </tr>
+</tbody></table>
+    <script language="javascript" type="text/javascript">
+    var time=0;
+    if(time=='5')
+    {     var t=5;    setInterval("testTime()",1000);  }
+    function testTime() 
+    {     if(t == 0) location ='myaccount.aspx';     t--;    }
+    </script>
+    <script language="javascript" type="text/javascript">
+        document.getElementById("divside6").className = "info_btn1";
+        document.getElementById("tagimage2").src = "../images/txz_d22.jpg";
+</script>
+    </form>
+
+</body></html>

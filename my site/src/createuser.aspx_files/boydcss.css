@@ -1,0 +1,217 @@
+body {background-image:url(../images/all_bg.jpg);background-repeat:repeat-x;background-color:#000000;margin:0;padding:0;font-size:12px;color:#FFF}
+a {color:#FFF; text-decoration:none}
+ul {padding:0;margin:0;}
+li {padding:0;margin:0;list-style:none}
+img {border:none}
+.font-red {color:#ff5a00;font-size:12px;}
+.font-blue {color:#308ab5;font-size:12px;}
+.font-blue a {color:#308ab5;font-size:12px; text-decoration:underline}
+.font-blue1 {color:#00b6ff;font-size:12px;}
+.font-blue1 a {color:#00b6ff;font-size:12px; text-decoration:underline}
+.font-blue2 {color:#00b6ff;font-size:14px;}
+.font-blue2 a {color:#00b6ff;font-size:14px; text-decoration:underline}
+.alcont {width:930px;margin:0 auto;}
+.topcont {width:930px;height:128px;margin:0 auto}
+.logo {width:274px;height:128px;float:left; background-image:url(../images/logo.jpg)}
+.logocont {width:274px;height:85px;margin:0 auto}
+.logo_title {background-image:url(../images/logo_tish.jpg);width:274px;height:43px;margin:85px auto 0}
+.logo_title1 { width:274px;height:43px;margin:0 auto}
+.topright {width:656px;height:128px;float:right}
+.topright_btn {width:221px;height:128px;float:right}
+.topright_btna {width:421px;height:128px;float:right}
+.topright_btn1 {width:221;height:22px;margin:5px auto 0; position:relative;}
+.topright_btn11 {width:221;height:22px;margin:5px 0 0 200px}
+.topright_btn2 {width:138px;height:30px; background-image:url(../images/top_daohang_bg.jpg);margin:61px 0 0 30px; text-align:center;line-height:30px;}
+.topright_btn2 a{color:#FFF; text-decoration:underline}
+.topright_btn3 {width:363px;height:43px;margin:59px 0 0 45px; text-align:center;line-height:30px;}
+.topright_btn3 ul {width:363px;}
+.topright_btn3 ul li {width:auto;float:left}
+.topright_btn4 {width:363px;height:43px;margin:0 0 0 45px; text-align:center;line-height:30px;}
+.topright_btn4 ul {width:363px;}
+.topright_btn4 ul li {width:auto;float:left}
+.main {width:930px;margin:0 auto;}
+.maincont {width:901px;margin:0 auto;  background-image:url(../images/cont_bg.jpg); background-repeat:no-repeat;overflow:hidden;background-position:top center;}
+.maincont1 {width:745px;margin:0 auto; background-image:url(../images/cont_bg.jpg); background-repeat:no-repeat;overflow:hidden;background-position:top center;}
+.cont_t {width:745px;margin:0 auto;height:57px;}
+.cont_t1 {width:745px;margin:10px auto 0;height:40px;}
+.cont_t1 ul {width:745px;margin:0 auto}
+.txt2_bg {	border:1px solid #A0B4C5;
+	height:22px;width:220px;
+	line-height:22px;
+	font-size:14px;}
+.txt1_bg {border:1px solid #727272;
+	height:22px;width:220px;
+	background-color:#FFFBD5;
+	font-size:14px;
+	line-height:22px;}
+.txt6_bg 
+{border:1px solid #727272;
+	height:22px;width:60px;
+	background-color:#FFFBD5;
+	font-size:14px;
+	line-height:22px;
+    }
+.txt3_bg 
+{border:1px solid #A0B4C5;
+	height:22px;width:60px;
+	line-height:22px;
+	font-size:14px;
+    }
+.txt4_bg {border:1px solid #666; background-color:#FFF}
+.cont_t1 ul li {width:auto;float:left;}
+.contbiaodan{width:535px;margin:10px auto 0 50px; color:#00b6ff; float:left;}
+.contright {width:210px;float:right;margin:10px auto 0}
+.zhuce_tishi1 {width:169px;height:112px; background-image:url(../images/zhuce_zhu1.gif);margin:5px auto 0; background-repeat:no-repeat; overflow:hidden}
+.zhuce_tishi1 h1 {width:140px;font-weight:normal;padding:0;margin:5px auto 0;font-size:12px;}
+.zhuce_tishi2 {width:169px; background-image:url(../images/zhuce_zhu2.gif);height:20px;margin:0px auto 0}
+.zhuce_tishi2 h1 {width:140px;font-weight:normal;padding:0;margin:0 auto;font-size:12px;line-height:20px}
+.zhuce_tishi3 {width:169px;height:99px;background-image:url(../images/zhuce_zhu3.gif);margin:5px auto 0; background-repeat:no-repeat}
+.zhuce_line {background-image:url(../images/zhuce_line.jpg);width:724px;height:1px;margin:4px auto 0; background-repeat:no-repeat}
+.zhuce_info {width:250px;height:auto;margin:0 auto;z-index:500; position :absolute; text-align:left;}
+.zhuce_notice_f{ position:relative; float:left; width:70px; height:20px;}
+.zhuce_info h1.font-red{ margin:0; padding:0;}
+
+.shenfengzheng_tishi { background-image:url(../images/tishi_bg.jpg);width:426px;height:214px;margin:0 auto}
+.shenfengzheng_title {width:426px;height:39px;color:#00b6ff;font-size:14px;font-weight:bold}
+.shenfengzheng_title h1 {float:left;width:auto;line-height:39px;font-size:14px;padding:0;margin:0 0 0 5px; text-align:center}
+.shenfengzheng_title h2 {float:right;width:40px;font-size:14px;padding:0;margin:12px auto 0;height:14px; text-align:center}
+.shenfengzheng_cont {width:426px;color:font-size:12px;font-weight:normal; overflow:hidden}
+
+.jihuo_tishi {width:519px;font-size:14px;color:#308ab5; text-align:center;margin:0 auto}
+.jihuo_tishicont {width:519px;background-image:url(../images/jihuo_tishibg.jpg);background-position:top center; background-repeat:no-repeat;margin:0 auto}
+.jihuo_chenggong {width:519px;background-image:url(../images/jihuozhuce_bg.jpg);background-position:top center; background-repeat:no-repeat;margin:20px auto 0}
+.jihuo_w {width:403px;border:1px solid #869198;overflow:hidden;margin:0 auto;background-color:#2f383d;}
+.jihuo_w h1 {width:395px;margin:0 auto;line-height:22px;font-weight:normal;padding:0;font-size:12px;}
+.jihuo_tishi_bg { background-image:url(../images/jihuo_tiaoguobg.jpg);width:426px;height:172px;margin:0 auto}
+
+.zhuce_tishi_su {width:519px;line-height:24px;font-size:14px;color:#00b6ff; text-align:center;margin:0 auto}
+
+.denglu_bg {background-image:url(../images/denglu_bg.jpg);width:903px;margin:0 auto;background-repeat:no-repeat; background-position:top center; overflow:hidden}
+.denglu_bg_left {width:610px;float:left; min-height:450px}
+.denglu_bg_right {width:290px;float:right}
+
+.tongxingzheng {background-image: url(../images/tongxingzheng_bg.jpg);width:901px;min-height:545px; height:545px; background-repeat:no-repeat}
+.tongxingzheng1 {background-image: url(../images/denglu_bg.jpg);width:901px;min-height:545px;height:auto;background-repeat:no-repeat}
+.tongxingzheng_left {width:222px;float:left;margin:0 auto 20px}
+.tongxingzheng_left_left {width:400px;margin:0 auto;float:left}
+.txzleft_l_d {width:374px;margin:20px auto 0; background-color:#013258}
+.txzleft_l_t {width:260px;margin:20px auto 0; background-color:#013258}
+.tongxingzheng_left_right {width:278px;margin:0 auto 20px;float:right}
+.tongxingzheng_right {width:678px;float:right;margin:0 auto}
+
+.info_btn1 { background-image:url(../images/info_bg1.jpg);width:194px;height:26px; text-align:center;color:#FF0;font-size:14px;line-height:26px;background-repeat:no-repeat}
+.info_btn1 a {color:#FF0; text-decoration:none}
+.info_btn2 { background-image:url(../images/info_bg2.jpg);width:174px;height:26px; padding-left:20px;text-align:left;color:#FFF;font-size:14px;line-height:26px;background-repeat:no-repeat;background-position:left center}
+.info_btn2 a{color:#FFF; text-decoration:none;width:194px;height:26px; }
+.info_conttitle {width:655px;margin:0 auto;height:35px;line-height:35px;background-image:url(../images/info_cont_line.jpg);color:#00b6ff;font-size:14px;text-align:left; font-weight:bold; background-position:center bottom; background-repeat:no-repeat}
+.info_contarea {width:456px;margin:15px auto;padding:15px; background-color:#013258}
+.txt5_bg {width:341px;border:1px solid #666; background-color:#FFF}
+.info_zhuangtai {width:360px;height:40px;text-align:right;margin:18px 0 0 048px;line-height:40px;font-weight:bold;color:#00b6ff;font-size:14px}
+.info_contarea1 {margin:15px auto;padding:15px; background-color:#013258}
+
+.mimaxiugai_tishi {width:650px;margin:10px auto 0; text-align:left;color:#ff5a00}
+
+.jihuo_tishi { background-image: url(../images/small_tishibg.jpg) ;width:426px;height:139px;margin:0 auto}
+.jihuo_tishi_title {width:426px;height:39px;color:#00b6ff;font-size:14px;font-weight:bold}
+.jihuo_tishi_title h1 {float:left;width:auto;line-height:39px;font-size:14px;padding:0;margin:0 0 0 5px; text-align:center}
+.jihuo_tishi_title h2 {float:right;width:40px;font-size:14px;padding:0;margin:12px auto 0;height:14px; text-align:center}
+.jihuo_tishi_cont {width:426px;font-size:12px;font-weight:normal;overflow:hidden}
+
+.font-weight_white {color:#FFF;font-size:12px;line-height:22px}
+
+.zhanghao_chuangjian {background-color:#013258;width:288px;height:134px;}
+.zhanghao_chuangjian1 {background-color:#013258;width:288px;margin:0 auto;}
+
+.txt11_bg {width:291px;margin:0 auto;padding:0 0 0 3px;overflow:hidden; background-image:url(../images/txt_11.jpg);height:28px;line-height:28px;color:#333;border:none; background-repeat:no-repeat;}
+.txt22_bg {width:291px;margin:0 auto;padding:0 0 0 3px;overflow:hidden; background-image:url(../images/txt_22.jpg);height:28px;line-height:28px;color:#333;border:none; background-repeat:no-repeat;}
+
+.tishi_chegongzhanghao {width:426px;height:40px;margin:0 auto; background-image:url(../images/tishi_wanchengbg.jpg);}
+.tishi_chegongzhanghao h1 {float:left;width:auto;line-height:39px;font-size:14px;padding:0;margin:0 0 0 5px; text-align:center}
+.tishi_chegongzhanghao h2 {float:right;width:40px;font-size:14px;padding:0;margin:12px auto 0;height:14px; text-align:center}
+
+.font-red {color:#ff5a00;font-size:12px;}
+.font-red a {color:#ff5a00;font-size:12px; text-decoration:underline}
+
+.txt12_bg {width:241px;margin:0 auto;padding:0 0 0 3px;overflow:hidden; background-image:url(../images/txt_12.jpg);height:28px;line-height:28px;color:#333;border:none; background-repeat:no-repeat;}
+.txt23_bg {width:241px;margin:0 auto;padding:0 0 0 3px;overflow:hidden; background-image:url(../images/txt_23.jpg);height:28px;line-height:28px;color:#333;border:none; background-repeat:no-repeat;}
+/*新增下拉样式*/
+
+.moremenu{height:12px;}
+/*
+.xiala {width:94px;margin:0 auto; border:1px solid #9f998c; position :absolute ; z-index:1000; right:10px; top :-12px;}
+.xialacont {width:90px;margin:0px auto;overflow:hidden}
+.xialacont ul {width:90px;margin:2 auto;}
+.xialacont ul li{width:90px;height:16px;margin:10px auto 0;line-height:16px; color:#666; text-align:center}
+.xialacont ul li a{ color:#666; text-decoration:none}
+.xialacont ul li.colordi {background-color:#ebebeb}
+.xialeft {float:left;margin:0 0 0 15px;_margin:0 0 0 8px; background-color:#FFF; }
+.xiaright {margin:0 0 0 10px;float:left;line-height:16px;} 
+.xiala_bangzhu {width:90px;height:25px; border-top:1px  dotted #CCC;margin:10px auto 0; text-align:center;color:#666}
+*/
+
+.xiala {width:94px;margin:0 auto; border:0px solid #9f998c; background-color:#FFF; position:absolute ; z-index:10000000;}
+.xialacont {width:90px;margin:10px auto;overflow:hidden; }
+.xialacont ul {width:90px;margin:0 auto;}
+.xialacont ul li{width:90px;height:16px;margin:10px auto 0;line-height:16px; color:#666; text-align:center}
+.xialacont ul li a{ color:#666; text-decoration:none}
+.xialacont ul li.colordi {background-color:#ebebeb}
+.xialeft {float:left;margin:0 0 0 15px;_margin:0 0 0 8px}
+.xiaright {margin:0 0 0 10px;float:left;line-height:16px;} 
+.xiala_bangzhu {width:90px;height:25px; border-top:1px  dotted #CCC;margin:10px auto 0; text-align:center;color:#666}
+
+
+
+
+/***20110509 style**/
+
+.bangding{ width:627px; margin:0 auto; padding-bottom:100px}
+.bangding table{width:100%; color:#00b6ff}
+
+.bangding .ts_text{background:url(../images/bd_textbg.png) no-repeat 45px center; height:62px; line-height:62px; text-align:center}
+.bangding table strong.f540{color:#ff5400}
+.bangding table h4{font-size:14px; padding:0; margin:0}
+.bangding table span{color:#ffffff}
+.bangding table a{color:#00b6ff; text-decoration:underline}
+.text274{ width:266px; height:28px; line-height:28px; padding:0 4px; background:url(../images/text274.jpg) no-repeat; border:0}
+.textyzm{width:127px; height:28px; line-height:28px; padding:0 4px; background:url(../images/textyzm.jpg) no-repeat; border:0; float:left; margin-right:10px}
+.bdstep1{ height:32px; background:url(../images/bangdingline.jpg) no-repeat bottom center; padding:6px 0 0 14px;}
+.bangding table label{ display:block; padding:6px}
+.bangding table label input{ vertical-align:middle; margin-right:10px;}
+
+.bdsb_dialog{ color:#00B6FF; border:1px solid #1F1E1D; width:424px; height:107px; background:url(../images/bdtbg.gif); margin:auto}
+.bdsb_dialog h2{ position:relative; padding:0; margin:0; font-size:14px; position:relative; height:40px; line-height:40px; text-indent:16px; background:url(../images/bangdingline.jpg) no-repeat bottom center}
+.bdsb_dialog h2 span{ display:block; height:14px; width:14px; position:absolute; cursor:pointer; background:url(../images/dacha.gif) no-repeat; right:10px; top:10px}
+.bdsb_dialog p{color:#ffffff; padding:9px 20px 5px 25px; line-height:22px; margin:0}
+.bdsb_dialog p a,.bdsb_dialog p span{color:#ff5400}
+.bdsb_dialog p a:hover{ text-decoration:underline}
+
+.ok_text h3{ text-align:center; font-size:16px; padding:45px 0 12px 0; margin:0}
+.ok_text ul{padding:0 0 18px 220px; line-height:22px}
+.ok_text p{ line-height:18px; padding-bottom:30px; padding-left:80px;}
+.ok_text p span,.ok_text p a{color:#ff5400; text-decoration:none}
+
+
+.bangding td.bg_ok{ background:#013258; width:663px; height:258px;}
+
+.bg_ok h3{ padding:0; margin:0; background:url(../images/bangdingline.jpg) no-repeat bottom center;text-indent:10px; height:38px; line-height:38px; font-size:14px;}
+.bg_ok p{ text-indent:10px;}
+.bg_ok .okbtn{ text-align:center; margin-bottom:10px}
+.bg_ok .okbtn img{ border:0}
+.bg_ok dl{ background:#2F383D; border:1px solid #869198; padding:8px 15px; margin:0 auto; width:558px; line-height:22px}
+.bg_ok dl dt{ font-size:14px; font-weight:bold}
+.bg_ok dl dd{ margin:0; padding:0; color:#ffffff}
+.bg_ok dl dd a,.bg_ok dl dd span{color:#ff5400}
+
+.ok_text p a:hover,.bg_ok dl dd a:hover{ text-decoration:underline}
+
+.btreg_dia{ height:210px;}
+.btreg_dia .bt_btns{ text-align:center; padding-top:5px}
+
+/**username**/
+.username{ width:220px; height:88px; background:#9dc7df; color:#B1D7E7; text-align:center;overflow:hidden;}
+.username a{color:#333; text-decoration:underline}
+.uform{ width:208px; height:19px; margin:0 auto; border:1px solid #4B5F9F}
+.uform input.text{ width:143px; height:17px; line-height:17px; padding:0 4px; border:1px solid #BBC6E2; float:left}
+.uform input.btn{ float:left; background:url(../images/uyhjc.jpg) repeat-x; width:55px; height:18px; border:1px solid #BBC6E2; border-left:0; cursor:pointer}
+.uts{ line-height:18px; height:45px; padding:15px 0 0 0; color:#333}
+.uts img{ vertical-align:text-top; margin-right:5px}

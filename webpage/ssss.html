@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+	function Test(ss)
+	{
+		function aaa()
+		{
+			alert(ss);
+		}
+		aaa();
+		     var hWin = window.open("", "hw4", "height=1000,width=800,scrollbars=yes");
+            hWin.document.write(123);
+            hWin.document.close();
+	}
+</script>
+</head>
+<body>
+<input id="xml_url" type="text" size="40" maxlenght="10"></input><br></br>
+
+<button onclick="Test(document.getElementById('xml_url').value)">Submit Query</button>
+</body>
+</html>

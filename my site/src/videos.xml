@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<videos>
+
+	 <video_path>flvs/video_1.flv</video_path>
+	 <video_title>Bubbles</video_title>
+     <video_description>Video Description Is Placed Here...</video_description>
+	 <thumb_path>thumbs/ant.jpg</thumb_path>
+	 <url_link>http://www.o2.co.uk/</url_link>
+  
+
+     <video_path>flvs/video_2.flv</video_path>
+	 <video_title>Toyota Yaris</video_title>
+     <video_description>Video Description Is Placed Here...</video_description>
+	 <thumb_path>thumbs/yaris.jpg</thumb_path>
+	 <url_link>http://www.toyota.com/yaris/</url_link>
+ 
+ 
+     <video_path>flvs/video_3.flv</video_path>
+	 <video_title>Cartoon Cat</video_title>
+     <video_description>Video Description Is Placed Here...</video_description>
+	 <thumb_path>thumbs/cat.jpg</thumb_path>
+	 <url_link>http://www.movieplayerpro.com/</url_link>
+
+	 <video_path>flvs/video_4.flv</video_path>
+	 <video_title>Honda Purpose</video_title>
+     <video_description>Video Description Is Placed Here...</video_description>
+	 <thumb_path>thumbs/honda.jpg</thumb_path>
+	 <url_link>http://www.honda.com</url_link>
+  
+       
+</videos>
